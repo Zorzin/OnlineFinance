@@ -1,6 +1,10 @@
+import { CreateReciptComponent } from './receipt/createreceipt.component';
+import { DetailsComponent } from './receipt/details.component';
+import { ReceiptComponent } from './receipt/receipt.component';
+import { HomeComponent } from './home/home.component';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { FormsModule,ReactiveFormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { RouterModule, Routes }   from '@angular/router';
 
@@ -13,11 +17,16 @@ import { routing } from './app.routes';
   declarations: [
     AppComponent,
     LoginComponent,
-    RegisterComponent
+    RegisterComponent,
+    HomeComponent,
+    ReceiptComponent,
+    DetailsComponent,
+    CreateReciptComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
+    ReactiveFormsModule,
     HttpModule,
     routing
   ],

@@ -1,0 +1,46 @@
+<form [formGroup]="registerForm" (ngSubmit)="add(registerForm.value,registerForm.valid)"> 
+    <div class="col-md-12">
+    <div class="col-md-4">
+        <label>Login</label>
+    </div>
+    <div class="col-md-8">
+        <input type="text" id="login" formControlName="login" name="login"/>
+        <p *ngIf="registerForm.controls.login.errors">This field is required!</p>
+    </div>
+    </div>
+    <div class="col-md-12">
+        <div class="col-md-4">
+            <label>Email</label>
+        </div>
+        <div class="col-md-8">
+            <input type="text" id="email" formControlName="email" name="email"/>
+            <p *ngIf="registerForm.controls.email.errors">This field is required!</p>
+        </div>
+    </div>
+    <div class="col-md-12">
+        <div class="col-md-4">
+            <label>Password</label>
+        </div>
+        <div class="col-md-8">
+            <input type="text" id="password" formControlName="password" name="password"/>
+            <p *ngIf="registerForm.controls.password.errors">This field is required!</p>
+        </div>
+    </div>
+    <div class="col-md-12">
+        <div class="col-md-4">
+            <label>Re-type Password</label>
+        </div>
+        <div class="col-md-8">
+            <input type="text" id="repassword" formControlName="repassword" name="repassword"/>
+            <p *ngIf="registerForm.controls.repassword.errors">This field is required!</p>
+        </div>
+    </div>
+
+    <div class="col-md-12">
+        <div class="col-md-4">
+        </div>
+        <div class="col-md-8">
+            <button type="submit" class="btn btn-info">Register</button>
+        </div>
+    </div>
+</form>

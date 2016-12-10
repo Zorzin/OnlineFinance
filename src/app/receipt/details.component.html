@@ -1,0 +1,34 @@
+<div class="col-md-12">
+
+    <div class="col-md-4">
+        <label>Name: </label>
+    </div>
+    <div class="col-md-8">
+        <label>{{DetailsItem.Name}}</label>
+    </div>
+
+    <div class="col-md-4">
+        <label>Shop: </label>
+    </div>
+    <div class="col-md-8">
+        <label>{{DetailsItem.Shop}}</label>
+    </div>
+
+    <div *ngFor="let item of DetailsItem.Products">        
+        <div class="col-md-4">
+            <label>{{item.name}}</label>
+        </div>
+        <div class="col-md-8">
+            <label>{{item.amount}}</label>
+            <br/>
+            <label>{{item.price}}</label>
+        </div>
+    </div>
+
+    <div class="col-md-4">
+        <label>All: </label>
+    </div>
+    <div class="col-md-8">
+        <label>{{DetailsItem.All}}</label>
+    </div>
+</div>
