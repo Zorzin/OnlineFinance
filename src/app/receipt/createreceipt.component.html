@@ -1,0 +1,16 @@
+
+<div *ngIf="!add" (click)="Create()" class="panel panel-default receipt">
+    <h1 >+</h1>
+</div>
+<div *ngIf="!create"  class="panel panel-default receipt" >
+    <div>
+        <form [formGroup]="reciptForm" (ngSubmit)="recipt(reciptForm.value, reciptForm.valid)">
+                <label>Name:</label>
+                <input type="text"formControlName="name"/>
+                <label>Shop:</label>
+                <input type="text"formControlName="shop"/>
+                <button type="button" class="btn btn-default">Add new shop</button>
+                <input type="submit" class="btn btn-info" value="Add"/>
+        </form>
+    </div>
+</div>

@@ -1,4 +1,4 @@
 
 <receipt [hidden]="hiddenlist" *ngFor="let item of ListOfReceipts" [ReceiptItem]="item" (detail)="onDetail($event)"></receipt>
-<a routerLink="/create" routerLinkActive="active">Create</a>
+<createreceipt></createreceipt>
 <details [hidden]="hiddendetail" [DetailsItem]="detailitem"></details>
